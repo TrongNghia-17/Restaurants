@@ -1,8 +1,8 @@
 @Restaurants.API_HostAddress = https://localhost:7005
-@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2WSkdnjcrcaIGG7Su4aoawmaGpaHS6cf8draXXYNLW3Ufw8Yy79vz2VOYV1AOln_RNxI0ndfggqzI-BfAIwTsF7dEW4fCPt--E8P4FdPf2lTyX2UNNg76QIpjgYDN04OCQy0klfxu8yZ2Km3W_ArVyhRHlFhB55nTR8pGqFCc9Xx9AlanAbMy94IKKeszj_2nysiJXurajU6UBbPRx9s4coW4QuwgpYoTyBt_EwYssDG9spOIyb7ws614opUaIUzejgHs4ro_INbfyXei3hsnvbwbXa4EoFivvbD7AquR79TvjXQdolmYu2ZnHxgLzgQrw63_YlpycJRRCXxuo8OxRuVtxDVb9lyFzxR4RAu0PJ4LWM2lbWexMKYx1KhyKTzWIYYkEloSa3uBcQJMooSnyGPI8sqj-IIuKhMnckS7uQjGB_OUt8HZ_NdOsORh6OAvIr8lvieKe9Fuj0RaBbg0l56P95l-9QvFagI_UcHHsrYJyQWF-mHR_LQmCV1KYLkihRwHRQD7XNZsyfZ_ADt0j4SVUJ5fld-j25ZzjtVC1Z9Me9fu97ys0W7B0cqnpsSEw0XV9qvGCJbqRphkObcl5pRBD3doxn9gPoP0-U7hzI-_HB17BhTWqZzqVJzrrv1H8e-gFqboOuIE100B7k8-tOeEZynFBP25MvMf1FxpY9PQ
+@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2VIEqQAgAmkcKffw7YKaQsZm6toUx2e49sB_4jWU0j19UXlaaiMDNaRcfNGhOzQvtGHHsYQKGtwEG1vqxdL-QHF4Rt2VecKp3r_Qe-nVvHlybXBAtni010KbOjbbk5g_zINXt3VKGnbpEN9mhW7m23o4JpCtjvWckePUAm2O3orzcoOKjbtvHqIHgbPV9ekNxSrgFGqKESCH_phUD1jq7jdDurX5bJ0W8cgvAbysNYLTNLCaVquKJFeyZyDz21js5pK24lZKKKIHpCDUD8_JBWhKR48W8L7tV_R5S1YX837yaWYqqnyVGNlWg5-syKbf1xhipKf5BXl9fFJ1iw71-RSjln3FaH8uRl6ezakWIvwq1or1nNE_I3BaaQAMI00kjD-gS0YaF8T9Vrd5vYTPXSx4TWbYfyYl-wTqWRve61gHKJFlIGPGSPVr0TJUA0tkxqoWid2sBQXVPuVVoZrd2MkJmJR9Up1AwZzkD9srneVXiaIysMKuCzinvaj0ND_7VTmk2zDmitO8pTXJW1lST26YKQzPgt7ioc1Ika7hiCbpxyQ5Qrj5_Z1TS9TC7jEEdBkj3hgspcqng1ShDqaEMJ7a8s4SnAmlMtUJU8vNlkTSzhhINqQPmcRQrXL0Kem4zk94SlNcK5cbicrLH1JM814ebbxeCeDGitJzCFeHrNQYs_JRsu6Xkp-hQPfGrnOtTOWo8uF7GQ3FF_9VD0DydDLnnWKClsopQF4UX6cK6os2EfuAUSg2t8_1bLmbcClraI
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
-#Authorization: Bearer {{token}}
+Authorization: Bearer {{token}}
 
 ###
 
@@ -67,6 +67,17 @@ GET {{Restaurants.API_HostAddress}}/api/restaurant/{{restaurantId}}/dishes
 DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1009
 
 ###
+
+PATCH {{Restaurants.API_HostAddress}}/api/identity/user
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nationality": "VietNam",
+  "dateofbirth": "2025-01-19"
+}
+
+###
 POST {{Restaurants.API_HostAddress}}/api/identity/register
 Content-Type: application/json
 
@@ -81,6 +92,6 @@ POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
-  "email": "owner@gmail.com",
-  "password": "Owner123!"
+  "email": "user@gmail.com",
+  "password": "User123!"
 }
