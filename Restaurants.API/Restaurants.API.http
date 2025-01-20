@@ -1,5 +1,5 @@
 @Restaurants.API_HostAddress = https://localhost:7005
-@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2VIEqQAgAmkcKffw7YKaQsZm6toUx2e49sB_4jWU0j19UXlaaiMDNaRcfNGhOzQvtGHHsYQKGtwEG1vqxdL-QHF4Rt2VecKp3r_Qe-nVvHlybXBAtni010KbOjbbk5g_zINXt3VKGnbpEN9mhW7m23o4JpCtjvWckePUAm2O3orzcoOKjbtvHqIHgbPV9ekNxSrgFGqKESCH_phUD1jq7jdDurX5bJ0W8cgvAbysNYLTNLCaVquKJFeyZyDz21js5pK24lZKKKIHpCDUD8_JBWhKR48W8L7tV_R5S1YX837yaWYqqnyVGNlWg5-syKbf1xhipKf5BXl9fFJ1iw71-RSjln3FaH8uRl6ezakWIvwq1or1nNE_I3BaaQAMI00kjD-gS0YaF8T9Vrd5vYTPXSx4TWbYfyYl-wTqWRve61gHKJFlIGPGSPVr0TJUA0tkxqoWid2sBQXVPuVVoZrd2MkJmJR9Up1AwZzkD9srneVXiaIysMKuCzinvaj0ND_7VTmk2zDmitO8pTXJW1lST26YKQzPgt7ioc1Ika7hiCbpxyQ5Qrj5_Z1TS9TC7jEEdBkj3hgspcqng1ShDqaEMJ7a8s4SnAmlMtUJU8vNlkTSzhhINqQPmcRQrXL0Kem4zk94SlNcK5cbicrLH1JM814ebbxeCeDGitJzCFeHrNQYs_JRsu6Xkp-hQPfGrnOtTOWo8uF7GQ3FF_9VD0DydDLnnWKClsopQF4UX6cK6os2EfuAUSg2t8_1bLmbcClraI
+@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2WjOqv-lzF_Wy8oaMHzEy5jIgMTRt2HexP6ou6SNPK1TBcVTDudX-oW5LKD4Lfk5dHYVJWqpdVByRQwasqLnNf1ByLGRV2HYw8BIL3bq63n6SlzgC_E-rnusOp3h7kzb-h_xl_OYUt_cet3EEpDmlbEQjLjHMz4JrSNeyZ-8BoPNPRIT1pjoe3StdUV60nSTwNLoeVKJYS8aLt6rX8ilZq_Q1kXBCmeKPW6r2TEJUfTSgv3aQcaX1H0MCkAROarVj2yuE1lLNBL2SsrtQMWWJyoUNSDro55uaF4iDzx_GIoYXRA0A8qZR5xy6yjyPeeyWZBvFiDEYwS0hKdFL5i4n0HofC_oJjaL72sE9SHX-D71F29AvH9T8ip0C0VjLGrBVfeauTFTHYxtsF32pUxmfPgNLFLvLQsHmWW_gxPG1X_X4zegSrM9n3ybLdDZHqKffA7m75uQzz_GoMptsKrDVdkk0RSDH88dztzGkbkoce90j1lC4lhfx2Jc6DOxztQXLEFQw9Z5LVR7n7dsSLYDh1jti9TzZUWVVhx5-bGDK0-EUy1W3KRL9sQPLYt_c4FTiFAf1vkkJjYWBzkb3GJznmTwz1bLAE0HnferXVViNbs4v0R8NTKhnjX2JYqcR3wM2wRdBW_luEL_Vo_KIDxsVU88LvrICoHjMVFDMn7khF8NBoh066URMf0-2_neZZvFQ4d8fKPeuamxE62n7yoNtAu4wFC9xN5kmGCG6zR6qtHHq5ShBOOoGVnROA1Q0y6o-Wa-awGb4XMKV0U5O-uFSgLIFvxjg5-5h23Fdu0dbfEH5reFBNHH6KnntGYGb8tBoi9sZBu-wLvkxIu1a--gT45jQePIdWPEq4GSYOJRbpzGw
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
 Authorization: Bearer {{token}}
@@ -8,6 +8,7 @@ Authorization: Bearer {{token}}
 
 @id=1012
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+Authorization: Bearer {{token}}
 
 ###
 
@@ -74,11 +75,12 @@ Content-Type: application/json
 
 {
   "nationality": "VietNam",
-  "dateofbirth": "2025-01-19"
+  "dateofbirth": "2003-05-17"
 }
 
 ###
-POST {{Restaurants.API_HostAddress}}/api/identity/register
+
+POST {{Restaurants.API_HostAddress}}/api/identity/login
 Content-Type: application/json
 
 {
@@ -88,10 +90,7 @@ Content-Type: application/json
 
 ###
 
-POST {{Restaurants.API_HostAddress}}/api/identity/login
-Content-Type: application/json
+GET {{Restaurants.API_HostAddress}}/api/restaurant/1012/dishes
+Authorization: Bearer {{token}}
 
-{
-  "email": "user@gmail.com",
-  "password": "User123!"
-}
+###
