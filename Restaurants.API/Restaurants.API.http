@@ -1,5 +1,5 @@
 @Restaurants.API_HostAddress = https://localhost:7005
-@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2WjOqv-lzF_Wy8oaMHzEy5jIgMTRt2HexP6ou6SNPK1TBcVTDudX-oW5LKD4Lfk5dHYVJWqpdVByRQwasqLnNf1ByLGRV2HYw8BIL3bq63n6SlzgC_E-rnusOp3h7kzb-h_xl_OYUt_cet3EEpDmlbEQjLjHMz4JrSNeyZ-8BoPNPRIT1pjoe3StdUV60nSTwNLoeVKJYS8aLt6rX8ilZq_Q1kXBCmeKPW6r2TEJUfTSgv3aQcaX1H0MCkAROarVj2yuE1lLNBL2SsrtQMWWJyoUNSDro55uaF4iDzx_GIoYXRA0A8qZR5xy6yjyPeeyWZBvFiDEYwS0hKdFL5i4n0HofC_oJjaL72sE9SHX-D71F29AvH9T8ip0C0VjLGrBVfeauTFTHYxtsF32pUxmfPgNLFLvLQsHmWW_gxPG1X_X4zegSrM9n3ybLdDZHqKffA7m75uQzz_GoMptsKrDVdkk0RSDH88dztzGkbkoce90j1lC4lhfx2Jc6DOxztQXLEFQw9Z5LVR7n7dsSLYDh1jti9TzZUWVVhx5-bGDK0-EUy1W3KRL9sQPLYt_c4FTiFAf1vkkJjYWBzkb3GJznmTwz1bLAE0HnferXVViNbs4v0R8NTKhnjX2JYqcR3wM2wRdBW_luEL_Vo_KIDxsVU88LvrICoHjMVFDMn7khF8NBoh066URMf0-2_neZZvFQ4d8fKPeuamxE62n7yoNtAu4wFC9xN5kmGCG6zR6qtHHq5ShBOOoGVnROA1Q0y6o-Wa-awGb4XMKV0U5O-uFSgLIFvxjg5-5h23Fdu0dbfEH5reFBNHH6KnntGYGb8tBoi9sZBu-wLvkxIu1a--gT45jQePIdWPEq4GSYOJRbpzGw
+@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2WuhQqfpiaVSqimKHwuzrLtYG0qTdS8ALhhMiVOwADD9SwsJHpLRI1NlZeEIaqH__7lfmiqHsLxdz9Vr5amQ9Rg4dI3gu797LtCAN7SXPi7z6auPzF5dxNoMuk4y00SiBxOS6itZDqgJIq1dkInNYaovZu3lj0S_ac_DHDoen6ztWDpJwvcK825WiHMynV-Z2F9iNC4DGmtHK807TibpzLNfYqgt92GY_rAcpZPbQwX6tbbHKYAMTFIpdAi_UiuO0Gt6FzQvdV6ferM3e2vonI8pP1AKTnKfYb404m-cFZXxDHFDByJapWkVIO8F41DXUejNjwL8UHcBsYIwrS1tUCsWFL6WdZDdvHbQz8OI14VRd1gHURQDukFV1X_DmsjVnzUN4zs6WCdX1iCw5BJyOjIvl0IIZbTP866jWmiExUoJ-aZkJZgxn93SH_nhsqRoxFgKPJ7TnCjm-fIb6Rq7Z469KtZqupoO0PvGA_NDVqBH4SliQxqN8Cb4Sk7NRnMNr-HcU_sMEUpsc_JrSeFWPc7_kDz566742xIeBT83j56gYmDJ_U1NbT_NSom7TnM21PegYuxvh2Dq0StpEJ_V_wXcFPBHbAhuEeOgKkucVO4ZruEZQ7tKaHGg-Mj7kwZrMQz9-c9aRVzQTb_EBczWo8AW0QzsAZP1iLYz-xi8LzTWv9-5A2XyMwMkvff7N2bay6fYkIZx_KNc8dGZ7tlbtiHlnpSFPdDBdRyCdThriANkNmbPvwZKIXNbDSfl3u2KbGdjEkoqeVrGcKEKguV0-wEhXG_y-CeB-zSPQIoJlilg-3JJMafH-OLk1hysJJM8VlV4SNBvCL0pXy1oCeNpkxQH7wRgq3dATwwnsij6FbjZw
 
 GET {{Restaurants.API_HostAddress}}/api/restaurants
 Authorization: Bearer {{token}}
@@ -17,55 +17,16 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "name": "Sample Restaurant",
-  "description": "A sample description of the restaurant.",
+  "name": "KFC-Nghia",
+  "description": "Rat ngon",
   "category": "Italian",
   "hasDelivery": true,
-  "contactEmail": "sample@example.com",
-  "contactNumber": "+1234567890",
-  "city": "Sample City",
-  "street": "123 Sample Street",
-  "postalCode": "12-345"
+  "contactEmail": "kfc-nghia@gmail.com",
+  "contactNumber": "1234567890",
+  "city": "ThuDuc",
+  "street": "ManThien",
+  "postalCode": "12-123"
 }
-
-###
-
-GET https://localhost:7005/api/restaurants/1007
-
-###
-
-DELETE {{Restaurants.API_HostAddress}}/api/restaurants/9
-
-###
-
-PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1011
-Content-Type: application/json
-
-{
-  "name": "Ngoc Han",
-  "description": "A sample description of the restaurant.",
-    "hasDelivery": true
-}
-###
-
-POST {{Restaurants.API_HostAddress}}/api/restaurant/1012/dishes
-Content-Type: application/json
-
-{
-  "Name": "Ga chien",
-  "Description": "Ngonn",
-  "Price": 100,
-  "KiloCalories": 100
-}
-
-###
-
-@restaurantId=1012
-GET {{Restaurants.API_HostAddress}}/api/restaurant/{{restaurantId}}/dishes
-
-###
-
-DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1009
 
 ###
 
@@ -90,7 +51,3 @@ Content-Type: application/json
 
 ###
 
-GET {{Restaurants.API_HostAddress}}/api/restaurant/1012/dishes
-Authorization: Bearer {{token}}
-
-###
