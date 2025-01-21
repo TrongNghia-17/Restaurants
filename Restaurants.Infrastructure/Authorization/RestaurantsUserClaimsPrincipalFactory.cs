@@ -3,7 +3,7 @@ using Microsoft.Extensions.Options;
 using Restaurants.Domain.Entities;
 using System.Security.Claims;
 
-namespace Restaurants.Infrastructure.Authorization;
+namespace Restaurants.Infrastructure.Constants;
 
 public class RestaurantsUserClaimsPrincipalFactory(UserManager<User> userManager, RoleManager<IdentityRole> roleManager, IOptions<IdentityOptions> options) : UserClaimsPrincipalFactory<User, IdentityRole>(userManager, roleManager, options)
 {
