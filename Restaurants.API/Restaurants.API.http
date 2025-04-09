@@ -1,0 +1,79 @@
+@Restaurants.API_HostAddress = https://localhost:7005
+@token = CfDJ8KVbLN8YEC5BlUb1WUVOv2VB0-rm_yk6DvS6LGT2_UFpBkdrcWMWC0gOsqDTqG0objqzuJLNXD5JMbIR1H5o7Nm2p7OEPtHGBHP_snAWQzJmiI9aiTdftOE_2tLMjKl2fjPpSQPTeA4Wni7s27EPtLe21jQkSZkwjxKHRV6GosZ6Rw1Xz1nN1vdgazvLfgLGavsxuhOKaFyFQD0lWAzT1nHoDK7eobyzYlIcq3MbLNPC1TugSKZhBsWcB4vDiYuHJlxPIXldK130QNplZD3g_J-LhZOsnpJdTa8O7XcN01i_u7hzoyWQ3yaprU8N39r4MErojVHF0HAAPojFolfHEtqYC5xxbB2S8trDsYeFOVMP1p-0NR7_TJXONd1-6oDA9OB4ffsfWWom_VIJ924H23QnwjD0G-IbLzPTDtHiPTJV8QNIkOKsnpU61uX0X8f-oZD66zAYofwylEtBphU3tLY_g3x_6YSDV7OE9KXboQIU5d8sG_b5AYUfPF4afRmFmM_YgP23RsgHbvWTOCv9K80uoAukkWoyWbfHTP26onfjD6zKU3H8CaPtBanTmOh7LuV1arDedeoZY8jrTB-6rv2WlqQ8tl8yciEB7VwxT3ca3_q2N8zCXSlHMimw1MwePv_Sy4bKTya4o5TI7T5GGapeAbJ-0y1DiVk3uzEzMBtkOq1q3Opt9HrX1dG6lRZSBS6FsVQ4DUlexgVRV7c5AhTzV6ZiC2Spgh3IbcKlmJkN8UhJmFq4drYitUGsqV__hfS3T9jZxtksIw7V4f4QZfoVqhZEHeZcQZksvtcDCNZZ
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants
+Authorization: Bearer {{token}}
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants/1012
+Authorization: Bearer {{token}}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "KFC2",
+  "description": "Rat ngon",
+  "category": "Italian",
+  "hasDelivery": true,
+  "contactEmail": "kfc-nghia@gmail.com",
+  "contactNumber": "1234567890",
+  "city": "ThuDuc",
+  "street": "ManThien",
+  "postalCode": "12-123"
+}
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/identity/user
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nationality": "VietNam",
+  "dateofbirth": "2003-05-17"
+}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/identity/login
+Content-Type: application/json
+
+{
+  "email": "owner2@gmail.com",
+  "password": "Owner2123!"
+}
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/1010
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "Name": "Updated name",
+  "Description": "Ngonnnn",
+  "HasDelivery": false
+}
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1010
+Authorization: Bearer {{token}}
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/identity/userRole
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "UserEmail": "owner2@gmail.com",
+  "RoleName": "Owner"
+}
+
+###
