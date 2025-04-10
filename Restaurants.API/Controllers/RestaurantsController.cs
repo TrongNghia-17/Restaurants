@@ -22,7 +22,7 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
     public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll()
     {
         var restaurants = await mediator.Send(new GetAllRestaurantsQuery());
-        return Ok(restaurants);
+        //return Ok(restaurants);
     }
 
     [HttpGet("{id}")]
